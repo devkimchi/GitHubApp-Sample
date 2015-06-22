@@ -1,0 +1,22 @@
+﻿@model GitHubAppSample.WebApp.Models.HomeIndexViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<ul>
+    <li>Username: @Model.Username</li>
+    <li>
+        Organisations:
+        @if (Model.Organisations.Any())
+        {
+            <ul>
+                @foreach (var organisation in Model.Organisations)
+                {
+                    <li>@organisation</li>
+                }
+            </ul>
+        }
+    </li>
+</ul>
